@@ -1,0 +1,17 @@
+body {
+  background: gray
+}
+h1 {
+  color: #fff
+}
+h3 {
+  color: #fff
+}
+section {
+  color: #fff
+}
+img {
+  background: transparent;
+  width: 200px;
+  height: auto
+}
