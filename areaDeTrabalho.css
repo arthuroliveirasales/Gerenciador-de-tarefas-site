@@ -1,0 +1,106 @@
+body{
+    background-color: rgb(247, 247, 247);
+}
+.spaceWork{
+    border: 1px solid rgb(231, 231, 231);
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.spaceWorkTop{
+    display: flex;
+    border: 1px solid rgb(221, 221, 221);
+    flex-direction: column;
+    gap: 5px;
+    height: 70px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.spaceWorkTitle{
+    border: 1px solid rgb(231, 231, 231);
+    height: 25px;
+    width: 90px;
+    background-color: white;
+    border-radius: 10px;
+}
+.canal{
+    display: flex;
+    gap: 5px;
+}
+.canal button{
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 10px;
+    height: 25px;
+    background-color: white;
+    color: rgb(41, 41, 41);
+}
+.canal button:hover{
+    background-color: rgb(224, 224, 224);
+    transition: 0.3s;
+}
+.filters{
+    border: 1px solid rgb(238, 238, 238);
+    background-color: white;
+    height: 30px;
+    width: 58px;
+    border-radius: 10px ;
+    color: rgb(99, 99, 99);
+}
+.filters:hover{
+    background-color: rgb(228, 228, 228);
+    transition: 0.3s;
+}
+.filters:active{
+    background-color: rgb(192, 192, 192);
+}
+.block{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+    height: 300px;
+    border: 0.1px solid rgb(233, 233, 233);
+    border-radius: 10px;
+    gap: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-top: 30px;
+}
+.blockTop{
+    display: flex;
+    width: 100%;  
+}
+.inputContent{
+    border: none;
+    height: 20px;
+    width: 260px;
+    border-radius: 4px;
+}
+.inputContent:hover{
+    background-color: rgb(223, 223, 223);
+    transition: 0.3s;
+}
+.options{
+    margin-left: 31%;
+    border: none;
+    background-color: white;
+    border-radius: 4px;
+    height: 20px;
+    width: 22px;
+}
+.options:hover{
+    background-color: rgb(231, 231, 231);
+    transition: 0.3s;
+}
+.blockTitle{
+    border: none;
+    background-color: rgb(255, 255, 255);
+    height: 20px;
+}
+.blockTitle:hover{
+    background-color: rgb(223, 223, 223);
+    transition: 0.3s;
+    border-radius: 4px;
+}
+input{
+    outline: none;
+}
