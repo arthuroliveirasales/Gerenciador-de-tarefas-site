@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="areaDeTrabalho.css">
-    <title>Document</title>
+    <title>areaDeTrabalho</title>
 </head>
 <body>
     <div class="pageTop">
-        <button type="button" class="userWorkSpace">
-            User's WorkSpace 
-        </button>
-        <input type="text" placeholder="Search">
+        <div class="userWorkSpaceAll">
+            <button type="button" class="userWorkSpace">
+                User's WorkSpace 
+            </button>
+
+            <img src="assets/setaExpandir.png" alt="setaExpandir" width="14px" class="setaExpandir">
+        </div>  
+
+        <div class="searchBarrAll">   
+            <input type="text" placeholder="Search" class="searchBarr">
+            <img src="assets/lupa.png" alt="lupa" width="14px" class="lupa">
+        </div> 
+
     </div>
 
     <div class="spaceWorkTop">
@@ -27,20 +36,38 @@
     </div>
 
     <div class="spaceWork">
+      <div class="addCardAndFilters">  
         <button type="button" class="filters">
             Filters
         </button>
-      <div class="block">
-        <div class="blockTop">
-            <input type="text" placeholder="TItle" class="blockTitle">
+
+        <button type="button" class="addCard">
+            Add card
+        </button>
+      </div>
+     <div class="cardContainer">
+      <div class="card">
+        <div class="cardTop">
+            <input type="text" placeholder="Title" class="cardTitle">
             <button type="button" class="options">...</button>
         </div>  
 
-        <div class="blockContent">
-            <input type="text" placeholder="Type something" class="inputContent">
+        <div class="cardContent">
+            <textarea placeholder="Type something" class="inputContent"></textarea>
         </div>
 
       </div>
+     </div>  
+
+      <div class="menuOptions">
+                <button class="addTask">Add task</button>
+                <button class="uploadFile">Upload file</button>
+                <button class="edit">Edit</button>
+                <button class="duplicate">Duplicate</button>
+                <button class="deleteCard">Delete Card</button>
+      </div>
     </div>
+
+     <script src="areaDeTrabalho.js"></script>
 </body>
 </html>
