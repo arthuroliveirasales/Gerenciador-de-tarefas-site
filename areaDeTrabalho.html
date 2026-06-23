@@ -27,7 +27,7 @@
        <button type="button" class="spaceWorkTitle">Team Space</button>
         <div class="canal">   
             <button type="button" class="overview">Overview</button>
-            <button type="button" class="list">List</button>
+            <button type="button" class="topList">List</button>
             <button type="button" class="calendar">Calendar</button>
             <button type="button" class="painting">Painting</button>
             <button type="button" class="gantt">Gantt</button>
@@ -53,7 +53,7 @@
             <button type="button" class="options">...</button>
             
               <div class="menuOptions">
-                <button class="addTask">Add task</button>
+                <button class="addTask">Add List</button>
                 <button class="uploadFile">Upload file</button>
                 <button class="edit">Edit</button>
                 <button class="duplicate">Duplicate</button>
@@ -64,6 +64,22 @@
 
         <div class="cardContent">
             <textarea placeholder="Type something" class="inputContent"></textarea>
+
+            <div class="list">
+                <div class="listTitleContainer">
+                    <input type="text" class="listTitle" placeholder="Title">
+                </div>
+                <div class="listContentContainer">
+                    <div class="listContent">
+                        <input type="text" class="content">
+                        <button type="button" class="complete"></button>
+                    </div>
+                </div>
+                <div class="addListContentConteiner">
+                    <button type="button" class="addListContent">+ Add</button>
+                </div>
+            </div>
+
         </div>
 
       </div>

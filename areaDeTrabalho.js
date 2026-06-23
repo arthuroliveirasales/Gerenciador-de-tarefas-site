@@ -29,7 +29,7 @@ function criarCard(){
 
     const addTask = document.createElement("button");
     addTask.classList.add("addTask");
-    addTask.textContent = "AddTask";
+    addTask.textContent = "Add List";
 
     const uploadFile = document.createElement("button");
     uploadFile.classList.add("uploadFile");
@@ -74,6 +74,13 @@ function criarCard(){
     card.append(cardContent);
     cardContent.append(inputContent);
 
+inputContent.addEventListener("input", size);
+
+function size(e){
+    e.target.style.height = "auto";
+    e.target.style.height = e.target.scrollHeight + "px";
+}
+
 options.addEventListener("click", showOptions);
 
 function showOptions(e){
@@ -88,6 +95,23 @@ function closeOptions(e){
     menuOptions.classList.remove("visible");
 }
 
+
+//delet card: 
+
+deleteCard.addEventListener("click", (e) => {
+    e.stopPropagation();
+    card.remove();
+});
+
+}
+
+const originalInputContent = document.querySelector(".inputContent");
+
+originalInputContent.addEventListener("input", size);
+
+function size(e){
+    e.target.style.height = "auto";
+    e.target.style.height = e.target.scrollHeight + "px";
 }
 
 const originalBtn = document.querySelector(".options");
@@ -105,5 +129,15 @@ document.addEventListener("click", closeOptions);
 function closeOptions(){
     originalMenu.classList.remove("visible");
 }
+
+//delet card:
+
+originalDeleteCard = document.querySelector(".deleteCard");
+originalCard = document.querySelector(".card");
+
+originalDeleteCard.addEventListener("click", (e) => {
+    e.stopPropagation();
+    originalCard.remove();
+});
 
 
