@@ -49,14 +49,7 @@ function criarCard(){
         const listContentContainer = document.createElement("div");
         listContentContainer.classList.add("listContentContainer");
 
-        const listContent = document.createElement("div");
-        listContent.classList.add("listContent");
-
-        const content = document.createElement("input");
-        content.classList.add("content");
-
-        const complete = document.createElement("button");
-        complete.classList.add("complete");
+        
 
         const addAndRemoveListContentConteiner = document.createElement("div");
         addAndRemoveListContentConteiner.classList.add("addAndRemoveListContentConteiner");
@@ -75,17 +68,15 @@ function criarCard(){
         listTitleContainer.append(listTitle);
 
     list.append(listContentContainer)
-        listContentContainer.append(listContent);
-            listContent.append(content);
-            listContent.append(complete);
+
 
     list.append(addAndRemoveListContentConteiner);
         addAndRemoveListContentConteiner.append(addListContent);
         addAndRemoveListContentConteiner.append(removeListContent);
 
-addListContent.addEventListener("click", addContent);
 
-function addContent(){
+
+addListContent.addEventListener("click", () => {
     const listContent = document.createElement("div");
     listContent.classList.add("listContent");
 
@@ -95,20 +86,77 @@ function addContent(){
     const complete = document.createElement("button");
     complete.classList.add("complete");
 
-    listContentContainer.append(listContent);
-    listContent.append(content);
-    listContent.append(complete);
+    listContent.append(content, complete);
+    listContentContainer.appendChild(listContent);
+
+    complete.addEventListener("click", () => {
+        complete.classList.toggle("completed");
+        content.classList.toggle("completed");
+    });
+});
+
+removeListContent.addEventListener("click", () => {
+    const last = listContentContainer.lastElementChild;
+    if (last) last.remove();
+});
+
 
 }
+//}   
+
+//addNotes:
+
+    const addNotes = document.createElement("button");
+    addNotes.classList.add("addNotes");
+    addNotes.textContent = "Add Notes";
+
+    addNotes.addEventListener("click", () => {
+        const inputContent = document.createElement("textarea");
+        inputContent.classList.add("inputContent");
+        inputContent.placeholder = "Type something";
+
+        
+        cardContent.append(inputContent);
+        
+        inputContent.addEventListener("input", size);
+
+    
+        function size(e){
+    e.target.style.height = "auto";
+    e.target.style.height = e.target.scrollHeight + "px";
+}
+    });
 
 
 
 
-    }
-//}            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const uploadFile = document.createElement("button");
     uploadFile.classList.add("uploadFile");
-    uploadFile.textContent = "UploadFile";
+    uploadFile.textContent = "Upload File";
 
     const edit = document.createElement("button");
     edit.classList.add("edit");
@@ -120,16 +168,14 @@ function addContent(){
 
     const deleteCard = document.createElement("button");
     deleteCard.classList.add("deleteCard");
-    deleteCard.textContent = "DeleteCard";
+    deleteCard.textContent = "Delete Card";
 
 //======================================================    
 
     const cardContent = document.createElement("div");
     cardContent.classList.add("cardContent");
 
-    const inputContent = document.createElement("textarea");
-    inputContent.classList.add("inputContent");
-    inputContent.placeholder = "Type something";
+    
 
 
     cardContainer.append(card);    
@@ -141,20 +187,15 @@ function addContent(){
     optionsContainer.append(menuOptions);
 
     menuOptions.append(addTask);
+    menuOptions.append(addNotes);
     menuOptions.append(uploadFile);
     menuOptions.append(edit);
     menuOptions.append(duplicate);
     menuOptions.append(deleteCard);
 
     card.append(cardContent);
-    cardContent.append(inputContent);
 
-inputContent.addEventListener("input", size);
 
-function size(e){
-    e.target.style.height = "auto";
-    e.target.style.height = e.target.scrollHeight + "px";
-}
 
 options.addEventListener("click", showOptions);
 
@@ -180,95 +221,3 @@ deleteCard.addEventListener("click", (e) => {
 
 }
 
-const originalInputContent = document.querySelector(".inputContent");
-
-originalInputContent.addEventListener("input", size);
-
-function size(e){
-    e.target.style.height = "auto";
-    e.target.style.height = e.target.scrollHeight + "px";
-}
-
-const originalBtn = document.querySelector(".options");
-const originalMenu = document.querySelector(".menuOptions");
-
-originalBtn.addEventListener("click", showOptions)
-
-function showOptions(e){
-    e.stopPropagation();
-    originalMenu.classList.toggle("visible");
-}
-
-document.addEventListener("click", closeOptions);
-
-function closeOptions(){
-    originalMenu.classList.remove("visible");
-}
-
-//delet card:
-
-const originalDeleteCard = document.querySelector(".deleteCard");
-const originalCard = document.querySelector(".card");
-
-originalDeleteCard.addEventListener("click", (e) => {
-    e.stopPropagation();
-    originalCard.remove();
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const listContentContainer = document.querySelector(".listContentContainer");
-const originalAddListContent = document.querySelector(".addListContent");
-
-originalAddListContent.addEventListener("click", addContent);
-
-function addContent(){
-    console.log("teste123");
-    const listContent = document.createElement("div");
-    listContent.classList.add("listContent");
-
-    const content = document.createElement("input");
-    content.classList.add("content");
-
-    const complete = document.createElement("button");
-    complete.classList.add("complete");
-
-    listContentContainer.append(listContent);
-    listContent.append(content);
-    listContent.append(complete);
-
-}
-
-//    const removeListContent = document.querySelector(".removeListContent");
-
-//    removeListContent.addEventListener("click", removeContent);
-
-//    function removeContent(){
-//    listContent.remove();
-//}
