@@ -176,23 +176,12 @@ document.addEventListener("click", (e) => {
     });
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
+//duplicate: 
 
     const duplicate = document.createElement("button");
     duplicate.classList.add("duplicate");
     duplicate.textContent = "Duplicate";
-
+   
     const deleteCard = document.createElement("button");
     deleteCard.classList.add("deleteCard");
     deleteCard.textContent = "Delete Card";

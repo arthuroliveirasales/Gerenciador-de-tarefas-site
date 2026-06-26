@@ -264,11 +264,22 @@ body::-webkit-scrollbar{
     padding-top: 10px;
 }
 .spaceWorkTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
     border: 1px solid rgb(231, 231, 231);
     height: 25px;
-    width: 90px;
+    width: 106px;
     background-color: white;
     border-radius: 10px;
+}
+.spaceWorkTitle:hover{
+    background-color: rgb(235, 235, 235);
+    transition: 0.3s;
+}
+.spaceWorkTitle:active{
+    background-color: rgb(204, 204, 204);
 }
 .canal{
     display: flex;
@@ -284,6 +295,9 @@ body::-webkit-scrollbar{
 .canal button:hover{
     background-color: rgb(224, 224, 224);
     transition: 0.3s;
+}
+.canal button:active{
+    background-color: rgb(189, 189, 189);
 }
 .addCardAndFilters{
     display: flex;
@@ -348,6 +362,9 @@ body::-webkit-scrollbar{
     padding-left: 10px;
     padding-top: 10px;
     margin-top: 10px;
+}
+.card:hover{
+    border: 1px solid rgb(202, 202, 202);
 }
 .cardTop{
     display: flex;
