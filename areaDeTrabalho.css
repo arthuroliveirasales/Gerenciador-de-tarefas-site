@@ -4,6 +4,28 @@ body{
 body::-webkit-scrollbar{
     display: none;
 }
+.teble{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+.board{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+.topList{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.overview{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
 .list{
     display: flex;
     flex-direction: column;
@@ -287,7 +309,7 @@ body::-webkit-scrollbar{
     display: flex;
     align-items: center;
     gap: 1px;
-    border: none;
+    border: 1px solid rgb(212, 212, 212);
     background-color: white;
     height: 30px;
     width: 64px;
